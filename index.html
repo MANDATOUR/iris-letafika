@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>IRIS LETAFIKA | Discover Madagascar</title>
+
+<meta name="description" content="Discover Madagascar with IRIS LETAFIKA. Explore beautiful beaches, unique wildlife, culture and unforgettable destinations.">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #263238;
+    background: #f5f8fa;
+    line-height: 1.6;
+}
+
+header {
+    background: #064e3b;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 34px;
+    letter-spacing: 2px;
+}
+
+header p {
+    margin-bottom: 0;
+}
+
+nav {
+    background: #043c30;
+    text-align: center;
+    padding: 14px 8px;
+}
+
+nav a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    margin: 5px 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #fbbf24;
+}
+
+.hero {
+    background:
+    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
+    url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1600&q=85");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 110px 20px;
+}
+
+.hero h2 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.button {
+    display: inline-block;
+    background: #fbbf24;
+    color: #17351f;
+    padding: 13px 22px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.button:hover {
+    background: #f59e0b;
+}
+
+section {
+    padding: 45px 20px;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    color: #065f46;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.section-intro {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 30px;
+}
+
+.destinations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px #00000015;
+    transition: transform .2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 18px;
+}
+
+.card h3 {
+    color: #047857;
+    margin-top: 0;
+}
+
+.about {
+    text-align: center;
+    line-height: 1.9;
+}
+
+.values {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px;
+    margin-top: 30px;
+}
+
+.value {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.value h3 {
+    color: #047857;
+}
+
+.contact {
+    background: #e5f5ed;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.contact p {
+    max-width: 700px;
+    margin: 12px auto;
+}
+
+footer {
+    background: #043c30;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+footer p {
+    margin: 5px;
+}
+
+@media(max-width: 600px) {
+    header h1 {
+        font-size: 27px;
+    }
+
+    .hero {
+        padding: 75px 18px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .section-title {
+        font-size: 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>IRIS LETAFIKA</h1>
+    <p>Discover the Beauty of Madagascar 🇲🇬</p>
+</header>
+
+<nav>
+    <a href="#home">Accueil / Home</a>
+    <a href="#destinations">Destinations</a>
+    <a href="#about">À propos / About</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<main>
+
+<div class="hero" id="home">
+    <h2>Explore the Magic of Madagascar</h2>
+
+    <p>
+        Discover breathtaking landscapes, unique wildlife,
+        tropical beaches and the rich culture of the Big Island.
+    </p>
+
+    <a class="button" href="#destinations">
+        Discover Madagascar
+    </a>
+</div>
+
+<section id="destinations">
+    <h2 class="section-title">Explore Our Destinations</h2>
+
+    <p class="section-intro">
+        Découvrez les merveilles de Madagascar :
+        des plages tropicales aux forêts luxuriantes,
+        en passant par les villes et les traditions locales.
+    </p>
+
+    <div class="destinations">
+
+        <article class="card">
+            <img
+                src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=800&q=80"
+                alt="Plage tropicale"
+                loading="lazy">
+
+            <div class="card-content">
+                <h3>Nosy Be</h3>
+                <p>
+                    Enjoy tropical beaches, turquoise waters
+                    and beautiful island scenery.
+                </p>
+                <p>
+                    Profitez des plages, de la mer et des paysages
+                    exceptionnels du nord-ouest de Madagascar.
+                </p>
+            </div>
+        </article>
+
+        <article class="card">
+            <img
+                src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=800&q=80"
+                alt="Paysage naturel africain"
+                loading="lazy">
+
+            <div class="card-content">
+                <h3>Andasibe</h3>
+                <p>
+                    Discover lush forests, remarkable biodiversity
+                    and Madagascar's unique wildlife.
+                </p>
+                <p>
+                    Explorez les forêts tropicales et découvrez
+                    la richesse de la faune malgache.
+                </p>
+            </div>
+        </article>
+
+        <article class="card">
+            <img
+                src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=800&q=80"
+                alt="Océan et vagues"
+                loading="lazy">
+
+            <div class="card-content">
+                <h3>Sainte-Marie</h3>
+                <p>
+                    Enjoy peaceful beaches, local culture
+                    and marine adventures.
+                </p>
+                <p>
+                    Découvrez une île paisible, ses plages
+                    et ses activités maritimes.
+                </p>
+            </div>
+        </article>
+
+        <article class="card">
+            <img
+                src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=800&q=80"
+                alt="Mer et paysage côtier"
+                loading="lazy">
+
+            <div class="card-content">
+                <h3>Toamasina</h3>
+                <p>
+                    Experience the east coast, local culture
+                    and Madagascar's tropical atmosphere.
+                </p>
+                <p>
+                    Explorez la côte est, ses paysages
+                    et sa culture locale.
+                </p>
+            </div>
+        </article>
+
+        <article class="card">
+            <img
+                src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=800&q=80"
+                alt="Animaux sauvages dans la nature"
+                loading="lazy">
+
+            <div class="card-content">
+                <h3>Wildlife & Nature</h3>
+                <p>
+                    Discover extraordinary animals and plants
+                    found nowhere else in the world.
+                </p>
+                <p>
+                    Partez à la découverte de la biodiversité
+                    unique de Madagascar.
+                </p>
+            </div>
+        </article>
+
+        <article class="card">
+            <img
+                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80"
+                alt="Montagnes et paysages naturels"
+                loading="lazy">
+
+            <div class="card-content">
+                <h3>Landscapes & Adventure</h3>
+                <p>
+                    Experience scenic landscapes, outdoor activities
+                    and memorable adventures.
+                </p>
+                <p>
+                    Admirez les paysages et préparez-vous
+                    à vivre des aventures inoubliables.
+                </p>
+            </div>
+        </article>
+
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h2 class="section-title">About IRIS LETAFIKA</h2>
+
+    <p>
+        IRIS LETAFIKA is a tourism discovery project dedicated
+        to showcasing the natural beauty, culture and destinations
+        of Madagascar to travellers from around the world.
+    </p>
+
+    <p>
+        IRIS LETAFIKA est un projet consacré à la découverte
+        des richesses naturelles, culturelles et touristiques
+        de Madagascar.
+    </p>
+
+    <div class="values">
+
+        <div class="value">
+            <h3>🌴 Nature</h3>
+            <p>Discover unique landscapes and tropical biodiversity.</p>
+        </div>
+
+        <div class="value">
+            <h3>文化 Culture</h3>
+            <p>Learn about Malagasy traditions and local life.</p>
+        </div>
+
+        <div class="value">
+            <h3>🌊 Adventure</h3>
+            <p>Find inspiration for your next Madagascar journey.</p>
+        </div>
+
+    </div>
+</section>
+
+<div class="contact" id="contact">
+    <h2 class="section-title">Plan Your Madagascar Journey</h2>
+
+    <p>
+        Would you like to discover Madagascar?
+        Contact us to discuss your travel ideas.
+    </p>
+
+    <p>
+        Envie de découvrir Madagascar ?
+        Contactez-nous pour parler de votre projet de voyage.
+    </p>
+
+    <!-- Remplace le numéro ci-dessous par ton numéro WhatsApp -->
+    <a
+        class="button"
+        href="https://wa.me/261XXXXXXXXX"
+        target="_blank"
+        rel="noopener">
+        Contact us on WhatsApp
+    </a>
+
+    <p>
+        <small>
+            WhatsApp contact will be available after the number is configured.
+        </small>
+    </p>
+</div>
+
+</main>
+
+<footer>
+    <p>© 2026 IRIS LETAFIKA</p>
+    <p>Discover Madagascar. Experience the extraordinary.</p>
+</footer>
+
+</body>
+</html>
