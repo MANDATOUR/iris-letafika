@@ -1,451 +1,511 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>IRIS LETAFIKA | Discover Madagascar</title>
+    <meta name="description" content="MANDA TOUR vous invite à découvrir Foulpointe, son patrimoine, sa plage et la culture de la côte Est de Madagascar.">
 
-<meta name="description" content="Discover Madagascar with IRIS LETAFIKA. Explore beautiful beaches, unique wildlife, culture and unforgettable destinations.">
+    <title>MANDA TOUR | Découvrez Foulpointe</title>
 
-<style>
-* {
-    box-sizing: border-box;
-}
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-html {
-    scroll-behavior: smooth;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    color: #263238;
-    background: #f5f8fa;
-    line-height: 1.6;
-}
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #263746;
+            background: #ffffff;
+            line-height: 1.7;
+        }
 
-header {
-    background: #064e3b;
-    color: white;
-    text-align: center;
-    padding: 25px 15px;
-}
+        header {
+            background: #123047;
+            color: white;
+            padding: 20px 7%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
 
-header h1 {
-    margin: 0;
-    font-size: 34px;
-    letter-spacing: 2px;
-}
+        .logo {
+            font-size: 27px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
 
-header p {
-    margin-bottom: 0;
-}
+        .logo span {
+            color: #78d8c8;
+        }
 
-nav {
-    background: #043c30;
-    text-align: center;
-    padding: 14px 8px;
-}
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+        }
 
-nav a {
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    margin: 5px 10px;
-    font-weight: bold;
-}
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+        }
 
-nav a:hover {
-    color: #fbbf24;
-}
+        nav a:hover {
+            color: #78d8c8;
+        }
 
-.hero {
-    background:
-    linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.45)),
-    url("https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=1600&q=85");
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 110px 20px;
-}
+        .hero {
+            background: linear-gradient(135deg, #e4f5f1, #f8f0df);
+            padding: 90px 7%;
+            min-height: 430px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
 
-.hero h2 {
-    font-size: 42px;
-    margin-bottom: 10px;
-}
+        .subtitle {
+            color: #087e83;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-size: 13px;
+        }
 
-.hero p {
-    font-size: 18px;
-    max-width: 700px;
-    margin: 0 auto;
-}
+        h1 {
+            color: #123047;
+            font-size: clamp(36px, 6vw, 65px);
+            line-height: 1.15;
+            margin: 18px 0;
+            max-width: 850px;
+        }
 
-.button {
-    display: inline-block;
-    background: #fbbf24;
-    color: #17351f;
-    padding: 13px 22px;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    margin-top: 20px;
-}
+        .hero p {
+            max-width: 720px;
+            font-size: 18px;
+            color: #435965;
+        }
 
-.button:hover {
-    background: #f59e0b;
-}
+        .button {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 24px;
+            background: #087e83;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            width: fit-content;
+        }
 
-section {
-    padding: 45px 20px;
-    max-width: 1150px;
-    margin: auto;
-}
+        .button:hover {
+            background: #065f63;
+        }
 
-.section-title {
-    text-align: center;
-    color: #065f46;
-    font-size: 30px;
-    margin-bottom: 10px;
-}
+        section {
+            padding: 65px 7%;
+            scroll-margin-top: 20px;
+        }
 
-.section-intro {
-    text-align: center;
-    max-width: 750px;
-    margin: 0 auto 30px;
-}
+        section h2 {
+            color: #123047;
+            font-size: clamp(26px, 4vw, 38px);
+            margin: 10px 0 20px;
+            line-height: 1.3;
+        }
 
-.destinations {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 22px;
-}
+        .intro {
+            max-width: 900px;
+            color: #596b75;
+            font-size: 17px;
+        }
 
-.card {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 3px 12px #00000015;
-    transition: transform .2s;
-}
+        .background {
+            background: #f5f1e8;
+        }
 
-.card:hover {
-    transform: translateY(-4px);
-}
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 22px;
+            margin-top: 30px;
+        }
 
-.card img {
-    width: 100%;
-    height: 210px;
-    object-fit: cover;
-    display: block;
-}
+        .card {
+            background: white;
+            padding: 25px;
+            border: 1px solid #e2e9e6;
+            border-radius: 10px;
+            box-shadow: 0 5px 18px rgba(18, 48, 71, 0.05);
+        }
 
-.card-content {
-    padding: 18px;
-}
+        .card h3 {
+            color: #087e83;
+            margin-bottom: 12px;
+            font-size: 20px;
+        }
 
-.card h3 {
-    color: #047857;
-    margin-top: 0;
-}
+        .card p {
+            color: #596b75;
+        }
 
-.about {
-    text-align: center;
-    line-height: 1.9;
-}
+        .highlight {
+            background: #edf8f5;
+            border-left: 5px solid #087e83;
+            padding: 22px;
+            margin-top: 25px;
+            border-radius: 0 8px 8px 0;
+            max-width: 900px;
+        }
 
-.values {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 18px;
-    margin-top: 30px;
-}
+        .tips {
+            max-width: 900px;
+            padding-left: 25px;
+        }
 
-.value {
-    background: #ffffff;
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-}
+        .tips li {
+            margin-bottom: 12px;
+        }
 
-.value h3 {
-    color: #047857;
-}
+        .contact {
+            background: #123047;
+            color: white;
+            padding: 35px;
+            border-radius: 12px;
+            max-width: 900px;
+        }
 
-.contact {
-    background: #e5f5ed;
-    text-align: center;
-    padding: 40px 20px;
-}
+        .contact h2 {
+            color: white;
+        }
 
-.contact p {
-    max-width: 700px;
-    margin: 12px auto;
-}
+        .contact p {
+            margin-bottom: 12px;
+        }
 
-footer {
-    background: #043c30;
-    color: white;
-    text-align: center;
-    padding: 25px 15px;
-}
+        .contact a {
+            color: #78d8c8;
+            overflow-wrap: anywhere;
+        }
 
-footer p {
-    margin: 5px;
-}
+        footer {
+            background: #0b2334;
+            color: #d7e3e8;
+            text-align: center;
+            padding: 25px 7%;
+            font-size: 14px;
+        }
 
-@media(max-width: 600px) {
-    header h1 {
-        font-size: 27px;
-    }
+        @media (max-width: 600px) {
+            header {
+                align-items: flex-start;
+                flex-direction: column;
+            }
 
-    .hero {
-        padding: 75px 18px;
-    }
+            nav {
+                gap: 12px;
+            }
 
-    .hero h2 {
-        font-size: 30px;
-    }
+            .hero {
+                padding: 60px 7%;
+            }
 
-    .hero p {
-        font-size: 16px;
-    }
+            section {
+                padding: 45px 7%;
+            }
 
-    .section-title {
-        font-size: 25px;
-    }
-}
-</style>
+            .contact {
+                padding: 24px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-    <h1>IRIS LETAFIKA</h1>
-    <p>Discover the Beauty of Madagascar 🇲🇬</p>
-</header>
-
-<nav>
-    <a href="#home">Accueil / Home</a>
-    <a href="#destinations">Destinations</a>
-    <a href="#about">À propos / About</a>
-    <a href="#contact">Contact</a>
-</nav>
-
-<main>
-
-<div class="hero" id="home">
-    <h2>Explore the Magic of Madagascar</h2>
-
-    <p>
-        Discover breathtaking landscapes, unique wildlife,
-        tropical beaches and the rich culture of the Big Island.
-    </p>
-
-    <a class="button" href="#destinations">
-        Discover Madagascar
-    </a>
-</div>
-
-<section id="destinations">
-    <h2 class="section-title">Explore Our Destinations</h2>
-
-    <p class="section-intro">
-        Découvrez les merveilles de Madagascar :
-        des plages tropicales aux forêts luxuriantes,
-        en passant par les villes et les traditions locales.
-    </p>
-
-    <div class="destinations">
-
-        <article class="card">
-            <img
-                src="https://images.unsplash.com/photo-1510414842594-a61c69b5ae57?auto=format&fit=crop&w=800&q=80"
-                alt="Plage tropicale"
-                loading="lazy">
-
-            <div class="card-content">
-                <h3>Nosy Be</h3>
-                <p>
-                    Enjoy tropical beaches, turquoise waters
-                    and beautiful island scenery.
-                </p>
-                <p>
-                    Profitez des plages, de la mer et des paysages
-                    exceptionnels du nord-ouest de Madagascar.
-                </p>
-            </div>
-        </article>
-
-        <article class="card">
-            <img
-                src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?auto=format&fit=crop&w=800&q=80"
-                alt="Paysage naturel africain"
-                loading="lazy">
-
-            <div class="card-content">
-                <h3>Andasibe</h3>
-                <p>
-                    Discover lush forests, remarkable biodiversity
-                    and Madagascar's unique wildlife.
-                </p>
-                <p>
-                    Explorez les forêts tropicales et découvrez
-                    la richesse de la faune malgache.
-                </p>
-            </div>
-        </article>
-
-        <article class="card">
-            <img
-                src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=800&q=80"
-                alt="Océan et vagues"
-                loading="lazy">
-
-            <div class="card-content">
-                <h3>Sainte-Marie</h3>
-                <p>
-                    Enjoy peaceful beaches, local culture
-                    and marine adventures.
-                </p>
-                <p>
-                    Découvrez une île paisible, ses plages
-                    et ses activités maritimes.
-                </p>
-            </div>
-        </article>
-
-        <article class="card">
-            <img
-                src="https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=800&q=80"
-                alt="Mer et paysage côtier"
-                loading="lazy">
-
-            <div class="card-content">
-                <h3>Toamasina</h3>
-                <p>
-                    Experience the east coast, local culture
-                    and Madagascar's tropical atmosphere.
-                </p>
-                <p>
-                    Explorez la côte est, ses paysages
-                    et sa culture locale.
-                </p>
-            </div>
-        </article>
-
-        <article class="card">
-            <img
-                src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=800&q=80"
-                alt="Animaux sauvages dans la nature"
-                loading="lazy">
-
-            <div class="card-content">
-                <h3>Wildlife & Nature</h3>
-                <p>
-                    Discover extraordinary animals and plants
-                    found nowhere else in the world.
-                </p>
-                <p>
-                    Partez à la découverte de la biodiversité
-                    unique de Madagascar.
-                </p>
-            </div>
-        </article>
-
-        <article class="card">
-            <img
-                src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80"
-                alt="Montagnes et paysages naturels"
-                loading="lazy">
-
-            <div class="card-content">
-                <h3>Landscapes & Adventure</h3>
-                <p>
-                    Experience scenic landscapes, outdoor activities
-                    and memorable adventures.
-                </p>
-                <p>
-                    Admirez les paysages et préparez-vous
-                    à vivre des aventures inoubliables.
-                </p>
-            </div>
-        </article>
-
-    </div>
-</section>
-
-<section class="about" id="about">
-    <h2 class="section-title">About IRIS LETAFIKA</h2>
-
-    <p>
-        IRIS LETAFIKA is a tourism discovery project dedicated
-        to showcasing the natural beauty, culture and destinations
-        of Madagascar to travellers from around the world.
-    </p>
-
-    <p>
-        IRIS LETAFIKA est un projet consacré à la découverte
-        des richesses naturelles, culturelles et touristiques
-        de Madagascar.
-    </p>
-
-    <div class="values">
-
-        <div class="value">
-            <h3>🌴 Nature</h3>
-            <p>Discover unique landscapes and tropical biodiversity.</p>
+    <!-- EN-TÊTE -->
+    <header>
+        <div class="logo">
+            MANDA <span>TOUR</span>
         </div>
 
-        <div class="value">
-            <h3>文化 Culture</h3>
-            <p>Learn about Malagasy traditions and local life.</p>
-        </div>
+        <nav>
+            <a href="#accueil">Accueil</a>
+            <a href="#foulpointe">Foulpointe</a>
+            <a href="#activites">Activités</a>
+            <a href="#patrimoine">Patrimoine</a>
+            <a href="#conseils">Conseils</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-        <div class="value">
-            <h3>🌊 Adventure</h3>
-            <p>Find inspiration for your next Madagascar journey.</p>
-        </div>
+    <!-- ACCUEIL -->
+    <main>
+        <section class="hero" id="accueil">
 
-    </div>
-</section>
+            <div class="subtitle">
+                Côte Est de Madagascar
+            </div>
 
-<div class="contact" id="contact">
-    <h2 class="section-title">Plan Your Madagascar Journey</h2>
+            <h1>
+                Découvrez Foulpointe autrement
+            </h1>
 
-    <p>
-        Would you like to discover Madagascar?
-        Contact us to discuss your travel ideas.
-    </p>
+            <p>
+                Bienvenue chez MANDA TOUR !
+                Partez à la découverte de Foulpointe, également appelée
+                Mahavelona, une destination de la côte Est de Madagascar.
+                Explorez son littoral, son histoire, sa culture et la vie locale.
+            </p>
 
-    <p>
-        Envie de découvrir Madagascar ?
-        Contactez-nous pour parler de votre projet de voyage.
-    </p>
+            <a href="#foulpointe" class="button">
+                Explorer Foulpointe
+            </a>
 
-    <!-- Remplace le numéro ci-dessous par ton numéro WhatsApp -->
-    <a
-        class="button"
-        href="https://wa.me/261XXXXXXXXX"
-        target="_blank"
-        rel="noopener">
-        Contact us on WhatsApp
-    </a>
+        </section>
 
-    <p>
-        <small>
-            WhatsApp contact will be available after the number is configured.
-        </small>
-    </p>
-</div>
+        <!-- PRÉSENTATION DE FOULPOINTE -->
+        <section id="foulpointe">
 
-</main>
+            <div class="subtitle">Notre destination</div>
 
-<footer>
-    <p>© 2026 IRIS LETAFIKA</p>
-    <p>Discover Madagascar. Experience the extraordinary.</p>
-</footer>
+            <h2>Foulpointe, entre mer et histoire</h2>
+
+            <p class="intro">
+                Située dans la région Atsinanana, sur la côte Est de Madagascar,
+                Foulpointe est connue sous le nom malgache de Mahavelona.
+                Cette destination invite les visiteurs à découvrir le bord
+                de mer, les paysages côtiers et les traditions locales.
+
+                <br><br>
+
+                Foulpointe possède une identité particulière, marquée par
+                son environnement naturel, son histoire et la vie de sa
+                communauté. C'est une destination intéressante pour les
+                voyageurs qui souhaitent découvrir une autre facette de
+                Madagascar.
+            </p>
+
+            <div class="highlight">
+                <strong>L'esprit de MANDA TOUR :</strong>
+                faire découvrir Foulpointe avec respect, mettre en valeur
+                ses richesses et encourager un tourisme responsable.
+            </div>
+
+        </section>
+
+        <!-- ACTIVITÉS -->
+        <section class="background" id="activites">
+
+            <div class="subtitle">Expériences touristiques</div>
+
+            <h2>Que faire à Foulpointe ?</h2>
+
+            <p class="intro">
+                Foulpointe offre différentes possibilités de découverte.
+                Les activités exactes dépendent des conditions météorologiques,
+                de la saison et des services disponibles sur place.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+                    <h3>Découvrir le littoral</h3>
+                    <p>
+                        Se promener au bord de la mer, profiter de l'ambiance
+                        côtière et prendre le temps d'apprécier le paysage.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Rencontrer la population locale</h3>
+                    <p>
+                        Découvrir les habitudes locales, les produits de la
+                        région et les traditions qui font partie de la vie
+                        quotidienne à Mahavelona.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Explorer les environs</h3>
+                    <p>
+                        Organiser des sorties dans les alentours pour mieux
+                        connaître les paysages et les lieux d'intérêt de la
+                        côte Est de Madagascar.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>Goûter à la cuisine locale</h3>
+                    <p>
+                        Découvrir les spécialités proposées par les restaurants
+                        et les petits établissements locaux, notamment les
+                        produits de la mer lorsqu'ils sont disponibles.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- PATRIMOINE -->
+        <section id="patrimoine">
+
+            <div class="subtitle">Histoire et culture</div>
+
+            <h2>Le patrimoine de Foulpointe</h2>
+
+            <p class="intro">
+                Foulpointe ne se résume pas à son littoral.
+                La destination possède également un patrimoine historique
+                qui témoigne de l'histoire de la côte Est de Madagascar.
+
+                <br><br>
+
+                Le Fort Manda constitue l'un des lieux patrimoniaux
+                emblématiques de Mahavelona. Il représente un point de départ
+                pour s'intéresser à l'histoire locale, à la défense du littoral
+                et à la mémoire de la région.
+            </p>
+
+            <div class="cards">
+
+                <article class="card">
+                    <h3>Le Fort Manda</h3>
+                    <p>
+                        Un site historique important pour découvrir une partie
+                        du passé de Foulpointe et de la côte Est.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>La culture locale</h3>
+                    <p>
+                        Les traditions, les savoir-faire et les échanges avec
+                        les habitants contribuent à l'identité de Mahavelona.
+                    </p>
+                </article>
+
+                <article class="card">
+                    <h3>La nature et le littoral</h3>
+                    <p>
+                        Le paysage côtier fait partie des richesses à préserver
+                        pour les habitants comme pour les générations futures.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+        <!-- TOURISME RESPONSABLE -->
+        <section class="background" id="responsable">
+
+            <div class="subtitle">Voyager autrement</div>
+
+            <h2>Un tourisme respectueux</h2>
+
+            <p class="intro">
+                Chez MANDA TOUR, nous souhaitons encourager une découverte
+                de Foulpointe qui respecte les habitants, les traditions,
+                le patrimoine et l'environnement.
+            </p>
+
+            <div class="highlight">
+                Chaque visiteur peut contribuer à préserver la destination :
+                garder les lieux propres, respecter les consignes locales,
+                demander l'autorisation avant de photographier une personne
+                et privilégier les services locaux lorsque cela est possible.
+            </div>
+
+        </section>
+
+        <!-- CONSEILS PRATIQUES -->
+        <section id="conseils">
+
+            <div class="subtitle">Préparer son voyage</div>
+
+            <h2>Conseils pratiques pour les visiteurs</h2>
+
+            <ul class="tips">
+                <li>
+                    Vérifiez la météo et les conditions routières avant votre départ.
+                </li>
+
+                <li>
+                    Renseignez-vous à l'avance sur les hébergements,
+                    les transports et les activités disponibles.
+                </li>
+
+                <li>
+                    Prévoyez de l'eau, une protection solaire et des vêtements
+                    adaptés aux activités prévues.
+                </li>
+
+                <li>
+                    Respectez les consignes de sécurité en bord de mer.
+                </li>
+
+                <li>
+                    Demandez les tarifs et les horaires directement aux
+                    prestataires locaux avant de réserver une activité.
+                </li>
+            </ul>
+
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+
+            <div class="contact">
+
+                <div class="subtitle">Contact</div>
+
+                <h2>Préparons votre découverte de Foulpointe</h2>
+
+                <p>
+                    Vous souhaitez obtenir des informations sur Foulpointe,
+                    partager une suggestion ou poser une question ?
+                    Contactez MANDA TOUR par e-mail.
+                </p>
+
+                <p>
+                    <strong>E-mail :</strong>
+                    <a href="mailto:irisletafika1@gmail.com">
+                        irisletafika1@gmail.com
+                    </a>
+                </p>
+
+                <a
+                    href="mailto:irisletafika1@gmail.com?subject=Demande%20d%27information%20-%20MANDA%20TOUR"
+                    class="button"
+                >
+                    Nous écrire
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- PIED DE PAGE -->
+    <footer>
+        <p>
+            © 2026 MANDA TOUR — Découvrir Foulpointe et la côte Est de Madagascar.
+        </p>
+
+        <p>
+            Culture, nature et tourisme responsable.
+        </p>
+    </footer>
 
 </body>
 </html>
