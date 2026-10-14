@@ -4,55 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="MANDA TOUR vous invite à découvrir Foulpointe, son patrimoine, sa plage et la culture de la côte Est de Madagascar.">
+    <meta name="description"
+          content="MANDA TOUR : découvrez Foulpointe, Mahavelona, le Fort Manda, le parc d'Analalava et les merveilles touristiques de Madagascar.">
 
-    <title>MANDA TOUR | Découvrez Foulpointe</title>
-/* GALERIE PHOTOS MANDA TOUR */
-.gallery-section {
-padding: 40px 20px;
-text-align: center;
-}
+    <meta name="keywords"
+          content="Foulpointe, Mahavelona, Madagascar, Fort Manda, Analalava, tourisme, plage, patrimoine">
 
-.gallery-section h2 {
-color: #d6a85c;
-font-size: 30px;
-}
+    <meta name="author" content="MANDA TOUR">
 
-.gallery-section p {
-line-height: 1.7;
-}
+    <title>MANDA TOUR | Découvrez Foulpointe, Madagascar</title>
 
-.gallery {
-display: grid;
-grid-template-columns: repeat(
-auto-fit,
-minmax(220px, 1fr)
-);
-gap: 18px;
-max-width: 1100px;
-margin: 30px auto;
-}
-
-.gallery figure {
-margin: 0;
-background: #f4f1e8;
-border-radius: 12px;
-overflow: hidden;
-}
-
-.gallery img {
-width: 100%;
-height: 220px;
-object-fit: cover;
-display: block;
-}
-
-.gallery figcaption {
-padding: 12px;
-color: #173b3a;
-font-weight: bold;
-}
     <style>
+        :root {
+            --vert: #123f3b;
+            --vert-clair: #21665b;
+            --dore: #e2b66f;
+            --sable: #f7f3e9;
+            --blanc: #ffffff;
+            --texte: #253532;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -65,93 +36,99 @@ font-weight: bold;
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            color: #263746;
-            background: #ffffff;
+            background: var(--sable);
+            color: var(--texte);
             line-height: 1.7;
         }
 
+        a {
+            color: inherit;
+        }
+
         header {
-            background: #123047;
-            color: white;
-            padding: 20px 7%;
+            background: var(--vert);
+            color: var(--blanc);
+            padding: 18px 6%;
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
             flex-wrap: wrap;
             gap: 15px;
         }
 
         .logo {
+            color: var(--dore);
             font-size: 27px;
             font-weight: bold;
             letter-spacing: 2px;
         }
 
-        .logo span {
-            color: #78d8c8;
-        }
-
         nav {
             display: flex;
             flex-wrap: wrap;
-            gap: 18px;
+            gap: 16px;
         }
 
         nav a {
-            color: white;
             text-decoration: none;
             font-size: 14px;
+            font-weight: bold;
         }
 
         nav a:hover {
-            color: #78d8c8;
+            color: var(--dore);
         }
 
         .hero {
-            background: linear-gradient(135deg, #e4f5f1, #f8f0df);
-            padding: 90px 7%;
-            min-height: 430px;
+            min-height: 490px;
             display: flex;
-            flex-direction: column;
-            justify-content: center;
+            align-items: center;
+            padding: 65px 8%;
+            color: white;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(8, 38, 35, 0.88),
+                    rgba(8, 38, 35, 0.28)
+                ),
+                url("https://commons.wikimedia.org/wiki/Special:FilePath/Foulpointe-beach.jpg")
+                center / cover no-repeat;
         }
 
-        .subtitle {
-            color: #087e83;
+        .hero-content {
+            max-width: 680px;
+        }
+
+        .hero small {
+            color: var(--dore);
             font-weight: bold;
-            text-transform: uppercase;
             letter-spacing: 3px;
-            font-size: 13px;
         }
 
-        h1 {
-            color: #123047;
-            font-size: clamp(36px, 6vw, 65px);
-            line-height: 1.15;
-            margin: 18px 0;
-            max-width: 850px;
+        .hero h1 {
+            font-size: clamp(38px, 6vw, 65px);
+            line-height: 1.12;
+            margin: 15px 0;
         }
 
         .hero p {
-            max-width: 720px;
             font-size: 18px;
-            color: #435965;
+            margin-bottom: 25px;
         }
 
         .button {
             display: inline-block;
-            margin-top: 25px;
-            padding: 12px 24px;
-            background: #087e83;
-            color: white;
-            text-decoration: none;
+            background: var(--dore);
+            color: #17352f;
+            padding: 12px 22px;
             border-radius: 6px;
+            text-decoration: none;
             font-weight: bold;
-            width: fit-content;
         }
 
         .button:hover {
-            background: #065f63;
+            background: white;
         }
 
         section {
@@ -159,115 +136,166 @@ font-weight: bold;
             scroll-margin-top: 20px;
         }
 
-        section h2 {
-            color: #123047;
-            font-size: clamp(26px, 4vw, 38px);
-            margin: 10px 0 20px;
-            line-height: 1.3;
+        .section-title {
+            color: var(--vert);
+            font-size: clamp(28px, 4vw, 38px);
+            text-align: center;
+            margin-bottom: 12px;
         }
 
-        .intro {
-            max-width: 900px;
-            color: #596b75;
-            font-size: 17px;
+        .section-intro {
+            max-width: 760px;
+            margin: 0 auto 32px;
+            text-align: center;
         }
 
-        .background {
-            background: #f5f1e8;
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            max-width: 950px;
+            margin: auto;
         }
 
         .cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 22px;
-            margin-top: 30px;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(230px, 1fr)
+            );
+            gap: 24px;
+            margin-top: 32px;
         }
 
         .card {
             background: white;
-            padding: 25px;
-            border: 1px solid #e2e9e6;
-            border-radius: 10px;
-            box-shadow: 0 5px 18px rgba(18, 48, 71, 0.05);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        .card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            display: block;
+            background: #d9e4dc;
+        }
+
+        .card-content {
+            padding: 20px;
         }
 
         .card h3 {
-            color: #087e83;
-            margin-bottom: 12px;
-            font-size: 20px;
+            color: var(--vert);
+            margin-bottom: 9px;
         }
 
         .card p {
-            color: #596b75;
+            font-size: 15px;
         }
 
-        .highlight {
-            background: #edf8f5;
-            border-left: 5px solid #087e83;
-            padding: 22px;
+        .caption {
+            display: block;
+            font-size: 12px;
+            color: #5d6b66;
+            padding: 5px 12px 0;
+        }
+
+        .forest {
+            background: #e8efe5;
+        }
+
+        .news {
+            background: white;
+        }
+
+        .news-date {
+            color: #8b642b;
+            font-weight: bold;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+
+        .news-link {
+            display: inline-block;
+            margin-top: 12px;
+            color: var(--vert-clair);
+            font-weight: bold;
+        }
+
+        .notice {
+            background: #fff2d8;
+            border-left: 5px solid var(--dore);
+            padding: 20px;
             margin-top: 25px;
-            border-radius: 0 8px 8px 0;
-            max-width: 900px;
+            border-radius: 5px;
         }
 
-        .tips {
-            max-width: 900px;
-            padding-left: 25px;
+        .sources {
+            background: #e8efe5;
         }
 
-        .tips li {
-            margin-bottom: 12px;
+        .sources ul {
+            max-width: 850px;
+            margin: 25px auto 0;
+            padding-left: 24px;
         }
 
-        .contact {
-            background: #123047;
-            color: white;
-            padding: 35px;
-            border-radius: 12px;
-            max-width: 900px;
+        .sources li {
+            margin-bottom: 14px;
         }
 
-        .contact h2 {
-            color: white;
-        }
-
-        .contact p {
-            margin-bottom: 12px;
-        }
-
-        .contact a {
-            color: #78d8c8;
+        .sources a {
+            color: #14574d;
             overflow-wrap: anywhere;
         }
 
-        footer {
-            background: #0b2334;
-            color: #d7e3e8;
+        .contact {
+            background: var(--vert);
+            color: white;
             text-align: center;
-            padding: 25px 7%;
-            font-size: 14px;
+        }
+
+        .contact h2 {
+            color: var(--dore);
+        }
+
+        .contact a {
+            color: var(--dore);
+        }
+
+        footer {
+            background: #092d29;
+            color: white;
+            text-align: center;
+            padding: 22px;
+            font-size: 13px;
         }
 
         @media (max-width: 600px) {
             header {
-                align-items: flex-start;
-                flex-direction: column;
+                justify-content: center;
+                text-align: center;
             }
 
             nav {
+                justify-content: center;
                 gap: 12px;
             }
 
             .hero {
-                padding: 60px 7%;
-            }
-
-            section {
+                min-height: 420px;
                 padding: 45px 7%;
             }
 
-            .contact {
-                padding: 24px;
+            .hero p {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 45px 6%;
             }
         }
     </style>
@@ -275,281 +303,519 @@ font-weight: bold;
 
 <body>
 
-    <!-- EN-TÊTE -->
-    <header>
-        <div class="logo">
-            MANDA <span>TOUR</span>
-        </div>
+<header>
+    <div class="logo">MANDA TOUR</div>
 
-        <nav>
-            <a href="#accueil">Accueil</a>
-            <a href="#foulpointe">Foulpointe</a>
-            <a href="#activites">Activités</a>
-            <a href="#patrimoine">Patrimoine</a>
-            <a href="#conseils">Conseils</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+    <nav aria-label="Navigation principale">
+        <a href="#accueil">Accueil</a>
+        <a href="#destination">Destination</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#patrimoine">Patrimoine</a>
+        <a href="#nature">Nature</a>
+        <a href="#actualites">Actualités</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<main>
 
     <!-- ACCUEIL -->
-    <main>
-        <section class="hero" id="accueil">
 
-            <div class="subtitle">
-                Côte Est de Madagascar
-            </div>
+    <section class="hero" id="accueil">
+        <div class="hero-content">
+            <small>MAHAVÉLONA • MADAGASCAR</small>
 
-            <h1>
-                Découvrez Foulpointe autrement
-            </h1>
+            <h1>Découvrez les merveilles de Foulpointe</h1>
 
             <p>
-                Bienvenue chez MANDA TOUR !
-                Partez à la découverte de Foulpointe, également appelée
-                Mahavelona, une destination de la côte Est de Madagascar.
-                Explorez son littoral, son histoire, sa culture et la vie locale.
+                Des plages de la côte Est au patrimoine du Fort Manda,
+                partez à la découverte d'une destination authentique,
+                entre mer, histoire et nature.
             </p>
 
-            <a href="#foulpointe" class="button">
-                Explorer Foulpointe
+            <a class="button" href="#galerie">
+                Explorer les photos
             </a>
+        </div>
+    </section>
 
-        </section>
+    <!-- PRESENTATION -->
 
-        <!-- PRÉSENTATION DE FOULPOINTE -->
-        <section id="foulpointe">
+    <section class="about" id="destination">
+        <div class="about-content">
+            <h2 class="section-title">
+                Bienvenue à Foulpointe
+            </h2>
 
-            <div class="subtitle">Notre destination</div>
-
-            <h2>Foulpointe, entre mer et histoire</h2>
-
-            <p class="intro">
-                Située dans la région Atsinanana, sur la côte Est de Madagascar,
-                Foulpointe est connue sous le nom malgache de Mahavelona.
-                Cette destination invite les visiteurs à découvrir le bord
-                de mer, les paysages côtiers et les traditions locales.
-
-                <br><br>
-
-                Foulpointe possède une identité particulière, marquée par
-                son environnement naturel, son histoire et la vie de sa
-                communauté. C'est une destination intéressante pour les
-                voyageurs qui souhaitent découvrir une autre facette de
-                Madagascar.
+            <p class="section-intro">
+                Foulpointe, également appelée Mahavelona, est une
+                destination balnéaire de la région Atsinanana,
+                sur la côte Est de Madagascar. Elle attire les
+                visiteurs grâce à son littoral, son histoire et
+                ses paysages naturels.
             </p>
 
-            <div class="highlight">
-                <strong>L'esprit de MANDA TOUR :</strong>
-                faire découvrir Foulpointe avec respect, mettre en valeur
-                ses richesses et encourager un tourisme responsable.
+            <p>
+                Les visiteurs peuvent profiter des plages, découvrir
+                les traditions locales, explorer les vestiges du
+                Fort Manda et organiser des excursions dans les
+                espaces naturels des environs.
+            </p>
+
+            <div class="notice">
+                <strong>Notre objectif :</strong>
+                faire connaître les richesses touristiques de
+                Foulpointe tout en encourageant le respect de
+                la nature, du patrimoine et des communautés locales.
             </div>
+        </div>
+    </section>
 
-        </section>
+    <!-- GALERIE -->
 
-        <!-- ACTIVITÉS -->
-        <section class="background" id="activites">
+    <section id="galerie">
+        <h2 class="section-title">
+            Galerie photos de Foulpointe
+        </h2>
 
-            <div class="subtitle">Expériences touristiques</div>
+        <p class="section-intro">
+            Découvrez quelques paysages et lieux emblématiques
+            de Mahavelona grâce à cette galerie.
+        </p>
 
-            <h2>Que faire à Foulpointe ?</h2>
+        <div class="cards">
 
-            <p class="intro">
-                Foulpointe offre différentes possibilités de découverte.
-                Les activités exactes dépendent des conditions météorologiques,
-                de la saison et des services disponibles sur place.
-            </p>
+            <article class="card">
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:FilePath/Foulpointe-beach.jpg"
+                    alt="Vue de la plage de Foulpointe"
+                    loading="lazy">
 
-            <div class="cards">
-
-                <article class="card">
-                    <h3>Découvrir le littoral</h3>
+                <div class="card-content">
+                    <h3>La plage de Foulpointe</h3>
                     <p>
-                        Se promener au bord de la mer, profiter de l'ambiance
-                        côtière et prendre le temps d'apprécier le paysage.
+                        Le littoral est l'un des principaux attraits
+                        de cette destination balnéaire.
                     </p>
-                </article>
+                    <a class="news-link"
+                       href="https://commons.wikimedia.org/wiki/File:Foulpointe-beach.jpg"
+                       target="_blank" rel="noopener">
+                        Voir la source de la photo
+                    </a>
+                </div>
+            </article>
 
-                <article class="card">
-                    <h3>Rencontrer la population locale</h3>
+            <article class="card">
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:FilePath/Foulpointe.jpg"
+                    alt="Vue sur la plage de Foulpointe"
+                    loading="lazy">
+
+                <div class="card-content">
+                    <h3>Les paysages côtiers</h3>
                     <p>
-                        Découvrir les habitudes locales, les produits de la
-                        région et les traditions qui font partie de la vie
-                        quotidienne à Mahavelona.
+                        Une invitation à découvrir la côte Est
+                        de Madagascar.
                     </p>
-                </article>
+                    <a class="news-link"
+                       href="https://commons.wikimedia.org/wiki/File:Foulpointe.jpg"
+                       target="_blank" rel="noopener">
+                        Voir la source de la photo
+                    </a>
+                </div>
+            </article>
 
-                <article class="card">
-                    <h3>Explorer les environs</h3>
+            <article class="card">
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:FilePath/Plage_De_Foulpointe.jpg"
+                    alt="Paysage de la plage de Foulpointe"
+                    loading="lazy">
+
+                <div class="card-content">
+                    <h3>Le littoral de Mahavelona</h3>
                     <p>
-                        Organiser des sorties dans les alentours pour mieux
-                        connaître les paysages et les lieux d'intérêt de la
-                        côte Est de Madagascar.
+                        Un paysage côtier à découvrir lors
+                        d'un séjour dans la région.
                     </p>
-                </article>
+                    <a class="news-link"
+                       href="https://commons.wikimedia.org/wiki/File:Plage_De_Foulpointe.jpg"
+                       target="_blank" rel="noopener">
+                        Voir la source de la photo
+                    </a>
+                </div>
+            </article>
 
-                <article class="card">
-                    <h3>Goûter à la cuisine locale</h3>
+            <article class="card">
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:FilePath/Plage_FullPoint.JPG"
+                    alt="Plage de Foulpointe"
+                    loading="lazy">
+
+                <div class="card-content">
+                    <h3>Une escapade au bord de la mer</h3>
                     <p>
-                        Découvrir les spécialités proposées par les restaurants
-                        et les petits établissements locaux, notamment les
-                        produits de la mer lorsqu'ils sont disponibles.
+                        La plage permet de profiter du paysage
+                        et de l'atmosphère de la côte.
                     </p>
-                </article>
+                    <a class="news-link"
+                       href="https://commons.wikimedia.org/wiki/Category:Foulpointe"
+                       target="_blank" rel="noopener">
+                        Voir la collection de photos
+                    </a>
+                </div>
+            </article>
 
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- PATRIMOINE -->
-        <section id="patrimoine">
+    <!-- FORT MANDA -->
 
-            <div class="subtitle">Histoire et culture</div>
+    <section class="about" id="patrimoine">
+        <h2 class="section-title">
+            Le Fort Manda : un patrimoine historique
+        </h2>
 
-            <h2>Le patrimoine de Foulpointe</h2>
+        <p class="section-intro">
+            Le Fort Manda est un site historique majeur de
+            Mahavelona. Sa construction est liée au règne
+            du roi Radama Ier et à la défense de la côte Est
+            au XIXe siècle.
+        </p>
 
-            <p class="intro">
-                Foulpointe ne se résume pas à son littoral.
-                La destination possède également un patrimoine historique
-                qui témoigne de l'histoire de la côte Est de Madagascar.
+        <div class="cards">
 
-                <br><br>
+            <article class="card">
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:FilePath/Fort_Manda_Foulpointe,_Madagascar.jpg"
+                    alt="Fort historique Manda à Foulpointe"
+                    loading="lazy">
 
-                Le Fort Manda constitue l'un des lieux patrimoniaux
-                emblématiques de Mahavelona. Il représente un point de départ
-                pour s'intéresser à l'histoire locale, à la défense du littoral
-                et à la mémoire de la région.
-            </p>
-
-            <div class="cards">
-
-                <article class="card">
+                <div class="card-content">
                     <h3>Le Fort Manda</h3>
                     <p>
-                        Un site historique important pour découvrir une partie
-                        du passé de Foulpointe et de la côte Est.
+                        Un témoignage de l'histoire militaire
+                        et du patrimoine de Madagascar.
                     </p>
-                </article>
-
-                <article class="card">
-                    <h3>La culture locale</h3>
-                    <p>
-                        Les traditions, les savoir-faire et les échanges avec
-                        les habitants contribuent à l'identité de Mahavelona.
-                    </p>
-                </article>
-
-                <article class="card">
-                    <h3>La nature et le littoral</h3>
-                    <p>
-                        Le paysage côtier fait partie des richesses à préserver
-                        pour les habitants comme pour les générations futures.
-                    </p>
-                </article>
-
-            </div>
-
-        </section>
-
-        <!-- TOURISME RESPONSABLE -->
-        <section class="background" id="responsable">
-
-            <div class="subtitle">Voyager autrement</div>
-
-            <h2>Un tourisme respectueux</h2>
-
-            <p class="intro">
-                Chez MANDA TOUR, nous souhaitons encourager une découverte
-                de Foulpointe qui respecte les habitants, les traditions,
-                le patrimoine et l'environnement.
-            </p>
-
-            <div class="highlight">
-                Chaque visiteur peut contribuer à préserver la destination :
-                garder les lieux propres, respecter les consignes locales,
-                demander l'autorisation avant de photographier une personne
-                et privilégier les services locaux lorsque cela est possible.
-            </div>
-
-        </section>
-
-        <!-- CONSEILS PRATIQUES -->
-        <section id="conseils">
-
-            <div class="subtitle">Préparer son voyage</div>
-
-            <h2>Conseils pratiques pour les visiteurs</h2>
-
-            <ul class="tips">
-                <li>
-                    Vérifiez la météo et les conditions routières avant votre départ.
-                </li>
-
-                <li>
-                    Renseignez-vous à l'avance sur les hébergements,
-                    les transports et les activités disponibles.
-                </li>
-
-                <li>
-                    Prévoyez de l'eau, une protection solaire et des vêtements
-                    adaptés aux activités prévues.
-                </li>
-
-                <li>
-                    Respectez les consignes de sécurité en bord de mer.
-                </li>
-
-                <li>
-                    Demandez les tarifs et les horaires directement aux
-                    prestataires locaux avant de réserver une activité.
-                </li>
-            </ul>
-
-        </section>
-
-        <!-- CONTACT -->
-        <section id="contact">
-
-            <div class="contact">
-
-                <div class="subtitle">Contact</div>
-
-                <h2>Préparons votre découverte de Foulpointe</h2>
-
-                <p>
-                    Vous souhaitez obtenir des informations sur Foulpointe,
-                    partager une suggestion ou poser une question ?
-                    Contactez MANDA TOUR par e-mail.
-                </p>
-
-                <p>
-                    <strong>E-mail :</strong>
-                    <a href="mailto:irisletafika1@gmail.com">
-                        irisletafika1@gmail.com
+                    <a class="news-link"
+                       href="https://commons.wikimedia.org/wiki/File:Fort_Manda_Foulpointe,_Madagascar.jpg"
+                       target="_blank" rel="noopener">
+                        Consulter la source de l'image
                     </a>
-                </p>
+                </div>
+            </article>
 
-                <a
-                    href="mailto:irisletafika1@gmail.com?subject=Demande%20d%27information%20-%20MANDA%20TOUR"
-                    class="button"
-                >
-                    Nous écrire
+            <article class="card">
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:FilePath/Manda_Fort_Caserne_Foulpointe_Madagascar.jpg"
+                    alt="Ancienne caserne du Fort Manda"
+                    loading="lazy">
+
+                <div class="card-content">
+                    <h3>Les anciennes casernes</h3>
+                    <p>
+                        Les vestiges permettent d'imaginer
+                        l'organisation historique de la fortification.
+                    </p>
+                    <a class="news-link"
+                       href="https://commons.wikimedia.org/wiki/Category:Foulpointe"
+                       target="_blank" rel="noopener">
+                        Voir la collection du site
+                    </a>
+                </div>
+            </article>
+
+            <article class="card">
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:FilePath/Manda_Fort_Prison_Foulpointe_Madagascar.jpg"
+                    alt="Vestiges historiques du Fort Manda"
+                    loading="lazy">
+
+                <div class="card-content">
+                    <h3>Les vestiges historiques</h3>
+                    <p>
+                        Une découverte patrimoniale pour les
+                        visiteurs passionnés d'histoire.
+                    </p>
+                    <a class="news-link"
+                       href="https://commons.wikimedia.org/wiki/Category:Foulpointe"
+                       target="_blank" rel="noopener">
+                        Voir les sources des images
+                    </a>
+                </div>
+            </article>
+
+        </div>
+
+        <p class="section-intro" style="margin-top: 30px;">
+            Pour préparer une visite, consultez aussi
+            <a href="https://www.petitfute.com/v57569-mahavelona-foulpointe/c1173-visites-points-d-interet/c937-monuments/c952-fortifications-remparts/369214-le-fort-manda-du-roi-radama-ier.html"
+               target="_blank" rel="noopener">
+                cette présentation touristique du Fort Manda
+            </a>.
+        </p>
+    </section>
+
+    <!-- PARC D'ANALALAVA -->
+
+    <section class="forest" id="nature">
+        <h2 class="section-title">
+            La forêt d'Analalava
+        </h2>
+
+        <p class="section-intro">
+            À proximité de Foulpointe se trouve la forêt
+            d'Analalava, un espace naturel remarquable pour
+            découvrir la biodiversité de la côte Est.
+        </p>
+
+        <div class="cards">
+
+            <article class="card">
+                <img
+                    src="https://commons.wikimedia.org/wiki/Special:FilePath/Foulpointe-beach.jpg"
+                    alt="Paysage de la région de Foulpointe"
+                    loading="lazy">
+
+                <div class="card-content">
+                    <h3>Explorer les environs</h3>
+                    <p>
+                        Préparez une excursion dans les espaces
+                        naturels de la région avec un guide local.
+                    </p>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-content">
+                    <h3>Découvrir la biodiversité</h3>
+                    <p>
+                        La forêt d'Analalava est connue pour
+                        sa richesse en espèces végétales et animales.
+                        Les visites doivent respecter les habitats
+                        naturels et les consignes des gestionnaires.
+                    </p>
+                    <a class="news-link"
+                       href="https://madagascar-tourisme.com/fr/andeha-hizaha-ani-foulpointe-un-evenement-a-decouvrir-durant-le-week-end-de-toussaint/"
+                       target="_blank" rel="noopener">
+                        Lire la présentation touristique
+                    </a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-content">
+                    <h3>Un tourisme responsable</h3>
+                    <p>
+                        Ne laissez aucun déchet, ne dérangez pas
+                        les animaux et suivez les recommandations
+                        des guides et des responsables du site.
+                    </p>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="notice">
+            <strong>À noter :</strong>
+            les photos illustrant la forêt d'Analalava doivent
+            être vérifiées avant publication. Cette galerie ne
+            prétend pas que les images de plage représentent
+            la forêt elle-même.
+        </div>
+    </section>
+
+    <!-- ACTUALITES -->
+
+    <section class="news" id="actualites">
+        <h2 class="section-title">
+            Actualités du tourisme
+        </h2>
+
+        <p class="section-intro">
+            Quelques informations récentes et sources officielles
+            pour suivre l'évolution du tourisme à Madagascar
+            et dans le monde.
+        </p>
+
+        <div class="cards">
+
+            <article class="card">
+                <div class="card-content">
+                    <p class="news-date">9 octobre 2026</p>
+
+                    <h3>
+                        Madagascar mise à l'honneur pour son tourisme nature
+                    </h3>
+
+                    <p>
+                        Le ministère malgache du Tourisme a annoncé
+                        que Madagascar avait été sacrée meilleure
+                        destination nature de l'océan Indien 2026
+                        aux World Travel Awards. Cette distinction
+                        met en avant l'intérêt touristique des
+                        paysages et de la biodiversité du pays.
+                    </p>
+
+                    <a class="news-link"
+                       href="https://www.mta.gov.mg/actualites/"
+                       target="_blank" rel="noopener">
+                        Lire les actualités du ministère
+                    </a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-content">
+                    <p class="news-date">27 septembre 2026</p>
+
+                    <h3>
+                        Journée mondiale du tourisme
+                    </h3>
+
+                    <p>
+                        La Journée mondiale du tourisme est célébrée
+                        chaque année le 27 septembre. En 2026,
+                        ONU Tourisme met l'accent sur le numérique
+                        et l'intelligence artificielle pour repenser
+                        le tourisme. Ces outils peuvent contribuer
+                        à mieux informer les voyageurs, promouvoir
+                        les destinations et améliorer les services.
+                    </p>
+
+                    <a class="news-link"
+                       href="https://www.untourism.int/fr/journee-mondiale-du-tourisme-2026"
+                       target="_blank" rel="noopener">
+                        Consulter le thème officiel de 2026
+                    </a>
+                </div>
+            </article>
+
+            <article class="card">
+                <div class="card-content">
+                    <p class="news-date">Destination locale</p>
+
+                    <h3>
+                        Foulpointe : entre plage, histoire et nature
+                    </h3>
+
+                    <p>
+                        Foulpointe développe plusieurs attraits
+                        touristiques : son littoral, le Fort Manda,
+                        la gastronomie locale et les excursions
+                        dans les espaces naturels des environs.
+                    </p>
+
+                    <a class="news-link"
+                       href="https://madagascar-tourisme.com/fr/andeha-hizaha-ani-foulpointe-un-evenement-a-decouvrir-durant-le-week-end-de-toussaint/"
+                       target="_blank" rel="noopener">
+                        Lire l'article sur Foulpointe
+                    </a>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="notice">
+            <strong>Précision sur la date :</strong>
+            le 10 octobre n'est pas la date officielle de la
+            Journée mondiale du tourisme. Si un événement
+            touristique particulier a lieu à cette date,
+            il doit être présenté séparément avec sa propre source.
+        </div>
+    </section>
+
+    <!-- SOURCES -->
+
+    <section class="sources" id="sources">
+        <h2 class="section-title">
+            Sources et bibliographie
+        </h2>
+
+        <p class="section-intro">
+            Les références ci-dessous permettent de vérifier
+            les informations historiques, touristiques et
+            les actualités présentées sur MANDA TOUR.
+        </p>
+
+        <ul>
+            <li>
+                <a href="https://www.untourism.int/fr/journee-mondiale-du-tourisme-2026"
+                   target="_blank" rel="noopener">
+                    ONU Tourisme — Journée mondiale du tourisme 2026
                 </a>
+            </li>
 
-            </div>
+            <li>
+                <a href="https://www.untourism.int/fr/world-tourism-day"
+                   target="_blank" rel="noopener">
+                    ONU Tourisme — Historique de la Journée mondiale
+                    du tourisme
+                </a>
+            </li>
 
-        </section>
+            <li>
+                <a href="https://www.mta.gov.mg/actualites/"
+                   target="_blank" rel="noopener">
+                    Ministère du Tourisme et de l'Artisanat
+                    de Madagascar — Actualités
+                </a>
+            </li>
 
-    </main>
+            <li>
+                <a href="https://madagascar-tourisme.com/fr/andeha-hizaha-ani-foulpointe-un-evenement-a-decouvrir-durant-le-week-end-de-toussaint/"
+                   target="_blank" rel="noopener">
+                    Voyage Tourisme Madagascar — Présentation
+                    de Foulpointe, du Fort Manda et d'Analalava
+                </a>
+            </li>
 
-    <!-- PIED DE PAGE -->
-    <footer>
+            <li>
+                <a href="https://www.petitfute.com/v57569-mahavelona-foulpointe/c1173-visites-points-d-interet/c937-monuments/c952-fortifications-remparts/369214-le-fort-manda-du-roi-radama-ier.html"
+                   target="_blank" rel="noopener">
+                    Petit Futé — Le Fort Manda du roi Radama Ier
+                </a>
+            </li>
+
+            <li>
+                <a href="https://commons.wikimedia.org/wiki/Category:Foulpointe"
+                   target="_blank" rel="noopener">
+                    Wikimedia Commons — Collection de photos
+                    de Foulpointe
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+        <h2 class="section-title">
+            Contactez MANDA TOUR
+        </h2>
+
         <p>
-            © 2026 MANDA TOUR — Découvrir Foulpointe et la côte Est de Madagascar.
+            Une question, une suggestion ou une information
+            touristique à partager ?
         </p>
 
-        <p>
-            Culture, nature et tourisme responsable.
+        <p style="margin: 18px 0;">
+            Courriel :
+            <a href="mailto:irisletafika1@gmail.com">
+                irisletafika1@gmail.com
+            </a>
         </p>
-    </footer>
+
+        <a class="button" href="mailto:irisletafika1@gmail.com">
+            Nous écrire
+        </a>
+    </section>
+
+</main>
+
+<footer>
+    <p>© 2026 MANDA TOUR — Découvrez Foulpointe, Madagascar.</p>
+    <p>Respect du patrimoine, de la nature et des communautés locales.</p>
+</footer>
 
 </body>
 </html>
